@@ -8,7 +8,7 @@ const ErrorResponse = require('../utils/ErrorResponse')
 // LOGIN
 // login is done by username
 module.exports.login = async (username, password) => {
-   // get user with this username or email
+   // get user with this username
    const user = await UserService.getUserByUserName(username, true)
 
    // if there is no user then throw error
@@ -34,8 +34,7 @@ module.exports.login = async (username, password) => {
 }
 
 // SIGN UP
-// signup requires folowing fields; firstName, lastName, email,
-// username, password
+// signup requires folowing fields; firstName, lastName, username, password
 module.exports.signup = async (props) => {
    // extract fields from the props
    const { firstName, lastName, password, username, pp } = props

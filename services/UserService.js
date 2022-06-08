@@ -28,13 +28,12 @@ module.exports.getUser = async (userId) => {
 }
 
 // GET USER BY USERNAME
-// Following function brings user with the given username, if this
-// username given as an email then it looks for emails
+// Following function brings user with the given username
 module.exports.getUserByUserName = async (
    username,
    includePassword = false
 ) => {
-   // check emails and usernames for a match
+   // check usernames for a match
    const query = User.findOne({ username: username })
 
    // select password if it's wanted
