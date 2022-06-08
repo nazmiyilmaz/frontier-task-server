@@ -34,7 +34,7 @@ async function start() {
    app.use(require('./middlewares/error'))
 
    // get port
-   const port = process.env.DEFAULT_PORT || process.env.PORT
+   const port = process.env.PORT || process.env.DEFAULT_PORT
 
    // start app
    app.listen(port, () => {
