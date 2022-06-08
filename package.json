@@ -1,0 +1,23 @@
+{
+  "name": "frontier-task-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nazmiyilmaz/frontier-task-server.git"
+  },
+  "author": "nazmiyilmaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nazmiyilmaz/frontier-task-server/issues"
+  },
+  "homepage": "https://github.com/nazmiyilmaz/frontier-task-server#readme"
+}
