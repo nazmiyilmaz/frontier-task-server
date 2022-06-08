@@ -28,9 +28,15 @@ module.exports.getProduct = async (productId) => {
 // CREATE PRODUCT
 module.exports.createProduct = async (userId, props) => {
    // extract fields from the props
-   const { title, description, image } = props
+   const { title, description, image, price } = props
    // create user
-   const product = new Product({ title, description, image, owner: userId })
+   const product = new Product({
+      title,
+      description,
+      image,
+      price,
+      owner: userId,
+   })
    // save user
    const saved = await product.save()
    return saved

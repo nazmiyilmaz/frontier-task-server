@@ -25,6 +25,7 @@ async function start() {
    // register routers
    app.use('/api/v1/auth', require('./routes/v1/auth'))
    app.use('/api/v1/products', require('./routes/v1/products'))
+   app.use('/api/v1/resources', require('./routes/v1/resources'))
 
    // serve public files
    app.use('/api/v1/public', static('public'))

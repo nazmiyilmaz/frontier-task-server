@@ -6,6 +6,6 @@ const asyncHandler = require('../middlewares/async')
 module.exports.uploadFile = asyncHandler(async (req, res, next) => {
    const buffer = req.file.buffer
    const extension = req.file.originalname.split('.').pop()
-   const id = ResourceService.upload(buffer, extension)
-   res.status(200).json({ success: true, data: id })
+   const id = await ResourceService.upload(buffer, extension)
+   res.status(200).json({ success: true, data: `${id}.${extension}` })
 })

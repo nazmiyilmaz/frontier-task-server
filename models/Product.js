@@ -11,6 +11,9 @@ const schema = new mongoose.Schema(
       image: {
          type: String,
       },
+      price: {
+         type: Number,
+      },
       owner: {
          type: mongoose.Schema.Types.ObjectId,
          ref: 'User',
