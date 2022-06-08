@@ -5,6 +5,9 @@ require('dotenv').config({ path: './config/.env' })
 const express = require('express')
 const { setCORS, connectDB } = require('./config/setup')
 
+// helper for static serving
+const static = require('./middlewares/static')
+
 async function start() {
    // connect to db
    await connectDB()
@@ -22,6 +25,9 @@ async function start() {
    // register routers
    app.use('/api/v1/auth', require('./routes/v1/auth'))
    app.use('/api/v1/products', require('./routes/v1/products'))
+
+   // serve public files
+   app.use('/api/v1/public', static('public'))
 
    // use custom error handler
    app.use(require('./middlewares/error'))
