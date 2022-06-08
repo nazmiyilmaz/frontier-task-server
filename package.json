@@ -1,23 +1,37 @@
 {
-  "name": "frontier-task-server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "directories": {
-    "test": "tests"
-  },
-  "scripts": {
-    "test": "nodemon server.js",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/nazmiyilmaz/frontier-task-server.git"
-  },
-  "author": "nazmiyilmaz",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nazmiyilmaz/frontier-task-server/issues"
-  },
-  "homepage": "https://github.com/nazmiyilmaz/frontier-task-server#readme"
+   "name": "frontier-task-server",
+   "version": "1.0.0",
+   "description": "",
+   "main": "server.js",
+   "directories": {
+      "test": "tests"
+   },
+   "scripts": {
+      "dev": "nodemon server.js",
+      "start": "node server.js"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+ssh://git@github.com/nazmiyilmaz/frontier-task-server.git"
+   },
+   "dependencies": {
+      "bcryptjs": "^2.4.3",
+      "cors": "^2.8.5",
+      "dotenv": "^8.2.0",
+      "express": "^4.17.1",
+      "express-validator": "^6.6.1",
+      "jsonwebtoken": "^8.5.1",
+      "moment": "^2.29.1",
+      "moment-timezone": "^0.5.34",
+      "mongoose": "^5.10.0",
+      "multer": "^1.4.2",
+      "underscore": "^1.12.0",
+      "uniqid": "^5.3.0"
+   },
+   "author": "nazmiyilmaz",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/nazmiyilmaz/frontier-task-server/issues"
+   },
+   "homepage": "https://github.com/nazmiyilmaz/frontier-task-server#readme"
 }
